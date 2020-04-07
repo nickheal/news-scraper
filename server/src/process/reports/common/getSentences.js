@@ -1,3 +1,8 @@
+/**
+ * Gets the sentences from HTML elements
+ * @param {*} elements - all the elements
+ * @returns {string[]}
+ */
 export default function getSentences(elements) {
   return [...elements].map((element) => {
     if (!element.childNodes) return;

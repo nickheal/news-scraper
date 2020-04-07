@@ -8,7 +8,7 @@ import stripSpecialCharacters from './common/stripSpecialCharacters';
 import stripWordsShorterThan4 from './common/stripWordsShorterThan4';
 
 /**
- * This is the initial 'standard processor'
+ * Get the most frequent words from an HTML page
  * @param {string} html - the html to process
  */
 export default (html) => {

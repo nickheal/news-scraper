@@ -1,25 +1,6 @@
 import process from '../process';
 import scrape from './scrape';
-
-const targets = [{
-  id: 'bbc',
-  path: 'https://www.bbc.co.uk/'
-}, {
-  id: 'buzzfeed',
-  path: 'https://www.buzzfeed.com/'
-}, {
-  id: 'financial-times',
-  path: 'https://www.ft.com/'
-}, {
-  id: 'guardian',
-  path: 'https://www.theguardian.com/uk'
-}, {
-  id: 'heat',
-  path: 'https://heatworld.com/'
-}, {
-  id: 'reddit',
-  path: 'https://www.reddit.com/'
-}];
+import targets from './targets';
 
 /**
  * Scrapes all the targets in the argument
@@ -47,7 +28,7 @@ function processAll(scrapes) {
 
 /**
  * This function handles getting all the data
- * @return {object[]}
+ * @returns {object[]}
  */
 export default async () => {
   return targets

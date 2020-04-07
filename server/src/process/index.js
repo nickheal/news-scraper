@@ -15,7 +15,7 @@ const processors = [{
 /**
  * This function runs every processor on the html provided
  * @param {string} html - the html to process
- * @return {object}
+ * @returns {object}
  */
 export default (html) => {
   return processors.map((processor) => ({

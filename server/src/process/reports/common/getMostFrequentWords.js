@@ -1,5 +1,10 @@
-export default function getMostFrequentWords(result) {
-  return result
+/**
+ * Gets the most frequent words from an array of words
+ * @param {string[]} words - a list of all the words
+ * @returns {object[]}
+ */
+export default function getMostFrequentWords(words) {
+  return words
     .reduce((acc, currentWord) => {
       const existingWord = acc.find(({ word }) => word === currentWord);
       if (!existingWord) {
