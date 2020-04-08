@@ -7,8 +7,13 @@ const resources = {
   en: {
     translation: {
       averageWordLength: 'Average word length',
+      mixed: 'Mixed',
       mostFrequentWords: 'Most frequent words',
-      reports: "Reports",
+      negative: 'Negative',
+      neutral: 'Neutral',
+      positive: 'Positive',
+      reports: 'Reports',
+      sentiment: 'Sentiment',
 
       /** Targets */
       bbc: 'BBC',

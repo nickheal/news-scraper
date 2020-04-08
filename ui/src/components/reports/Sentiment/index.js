@@ -1,19 +1,20 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Key from './Key';
 import Row from './Row';
 
-const AverageWordLength = ({
+const Sentiment = ({
   targets,
   id
 }) => {
   const { t } = useTranslation();
-  const sortedTargets = targets.sort((a, b) => b.result - a.result);
 
   return (
     <>
       <h2>{t(id)}</h2>
+      <Key />
       <dl>
-        {sortedTargets.map(({ id, result }) => (
+        {targets.map(({ id, result }) => (
           <Row key={id} id={id} result={result} />
         ))}
       </dl>
@@ -21,4 +22,4 @@ const AverageWordLength = ({
   );
 };
 
-export default AverageWordLength;
+export default Sentiment;

@@ -17,7 +17,7 @@ const useStyles = createUseStyles({
   }
 });
 
-const Target = ({
+const Row = ({
   id,
   result
 }) => {
@@ -41,4 +41,4 @@ const Target = ({
   );
 };
 
-export default Target;
+export default Row;

@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import AverageWordLength from './components/reports/AverageWordLength';
 import MostFrequentWords from './components/reports/MostFrequentWords';
+import Sentiment from './components/reports/Sentiment';
 import useGlobalStyles from './App.styles';
 
 const useStyles = createUseStyles({
@@ -21,6 +22,8 @@ function getReportComponent(id) {
       return AverageWordLength;
     case 'mostFrequentWords':
       return MostFrequentWords;
+    case 'sentiment':
+      return Sentiment;
     default:
       return AverageWordLength;
   }

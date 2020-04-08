@@ -19,11 +19,11 @@ async function scrapeAll(targets) {
  * @param {object[]} scrapes - all the scraped html
  * @returns {object[]}
  */
-function processAll(scrapes) {
-  return scrapes.map(({ id, html }) => ({
+async function processAll(scrapes) {
+  return Promise.all(scrapes.map(async ({ id, html }) => ({
     id,
-    reports: process(html)
-  }));
+    reports: await process(html)
+  })));
 }
 
 /**
@@ -33,5 +33,5 @@ function processAll(scrapes) {
 export default async () => {
   return targets
     |> await scrapeAll(#)
-    |> processAll;
+    |> await processAll(#);
 };

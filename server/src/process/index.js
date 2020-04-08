@@ -1,5 +1,6 @@
 import averageWordLength from './reports/averageWordLength';
 import mostFrequentWords from './reports/mostFrequentWords';
+import sentiment from './reports/sentiment';
 
 /**
  * This is a list of all the processors to run
@@ -10,6 +11,9 @@ const processors = [{
 }, {
   func: mostFrequentWords,
   id: 'mostFrequentWords'
+}, {
+  func: sentiment,
+  id: 'sentiment'
 }];
 
 /**
@@ -17,9 +21,9 @@ const processors = [{
  * @param {string} html - the html to process
  * @returns {object}
  */
-export default (html) => {
-  return processors.map((processor) => ({
+export default async (html) => {
+  return Promise.all(processors.map(async (processor) => ({
     ...processor,
-    result: processor.func(html)
-  }))
+    result: await processor.func(html)
+  })))
 };
