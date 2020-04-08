@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+  arrayOf,
+  number,
+  shape,
+  string
+} from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { useTranslation } from 'react-i18next';
 import Word from './Word';
@@ -17,6 +23,9 @@ const useStyles = createUseStyles({
   }
 });
 
+/**
+ * A row of the most frequent words report
+ */
 const Row = ({
   id,
   result
@@ -39,6 +48,18 @@ const Row = ({
       </dd>
     </div>
   );
+};
+
+Row.propTypes = {
+  /** The ID of the current row (target) */
+  id: string.isRequired,
+  /** The most frequent words from the report */
+  result: arrayOf(
+    shape({
+      count: number,
+      word: string
+    })
+  ).isRequired
 };
 
 export default Row;

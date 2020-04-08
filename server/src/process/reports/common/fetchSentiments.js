@@ -1,4 +1,5 @@
 import { Comprehend } from 'aws-sdk';
+import getFirst25FromArray from './getFirst25FromArray';
 
 const mock = {
   ResultList: [{
@@ -23,13 +24,18 @@ const mock = {
   ErrorList: []
 }
 
+/**
+ * Fetches the 'sentiments' from a group of strings from AWS Comprehend API
+ * @param {string[]} groups - an array of strings
+ * @returns {Object}
+ */
 export default async function fetchSentiments(groups) {
   return new Promise((resolve, reject) => {
     resolve(mock);
     // const comprehend = new Comprehend();
     // comprehend.batchDetectSentiment({
     //   LanguageCode: 'en',
-    //   TextList: groups
+    //   TextList: getFirst25FromArray(groups)
     // }, (err, data) => {
     //   if (err) return reject(err);
     //   return resolve(data);

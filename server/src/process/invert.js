@@ -1,7 +1,7 @@
 /**
  * Takes scrapes done by target, and reorganises them to be by report
- * @param {object[]} allScrapes 
- * @returns {object[]}
+ * @param {Object[]} allScrapes 
+ * @returns {Object[]}
  */
 export default function invert(allScrapes) {
   if (!allScrapes?.length) return [];

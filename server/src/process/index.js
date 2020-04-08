@@ -19,7 +19,7 @@ const processors = [{
 /**
  * This function runs every processor on the html provided
  * @param {string} html - the html to process
- * @returns {object}
+ * @returns {Object}
  */
 export default async (html) => {
   return Promise.all(processors.map(async (processor) => ({

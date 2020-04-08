@@ -7,7 +7,7 @@ import groupSentencesUpTo5000 from './common/groupSentencesUpTo5000';
 import stripNonSentences from './common/stripNonSentences';
 
 /**
- * Get the most frequent words from an HTML page
+ * Gets the 'sentiment' of an HTML page using the AWS Comprehend API
  * @param {string} html - the html to process
  */
 export default async (html) => {

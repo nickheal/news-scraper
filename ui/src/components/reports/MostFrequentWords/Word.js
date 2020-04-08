@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+  number,
+  string
+} from 'prop-types';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
@@ -7,6 +11,9 @@ const useStyles = createUseStyles({
   }
 });
 
+/**
+ * An individual word in the most frequent words report
+ */
 const Word = ({
   count,
   word
@@ -14,6 +21,13 @@ const Word = ({
   const classes = useStyles({ count });
 
   return <span className={classes.sizer}>{ word }</span>;
+};
+
+Word.propTypes = {
+  /** The count for the number of times the word appeared */
+  count: number.isRequired,
+  /** The word itself */
+  word: string.isRequired
 };
 
 export default Word;

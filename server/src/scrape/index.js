@@ -4,8 +4,8 @@ import targets from './targets';
 
 /**
  * Scrapes all the targets in the argument
- * @param {object[]} targets - all the targets to be scraped
- * @returns {object[]}
+ * @param {Object[]} targets - all the targets to be scraped
+ * @returns {Object[]}
  */
 async function scrapeAll(targets) {
   return await Promise.all(targets.map(async ({ id, path }) => ({
@@ -16,8 +16,8 @@ async function scrapeAll(targets) {
 
 /**
  * Processes all the scraped html
- * @param {object[]} scrapes - all the scraped html
- * @returns {object[]}
+ * @param {Object[]} scrapes - all the scraped html
+ * @returns {Object[]}
  */
 async function processAll(scrapes) {
   return Promise.all(scrapes.map(async ({ id, html }) => ({

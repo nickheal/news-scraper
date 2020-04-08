@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  string
+} from 'prop-types';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
@@ -21,7 +24,10 @@ const useStyles = createUseStyles({
   }
 });
 
-const Target = ({
+/**
+ * A single item in a key for a chart
+ */
+const KeyItem = ({
   color,
   content
 }) => {
@@ -37,4 +43,11 @@ const Target = ({
   );
 };
 
-export default Target;
+KeyItem.propTypes = {
+  /** The colour for the key indicator */
+  color: string.isRequired,
+  /** The key name */
+  content: string.isRequired
+};
+
+export default KeyItem;

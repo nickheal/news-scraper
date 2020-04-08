@@ -16,6 +16,10 @@ const useStyles = createUseStyles({
   }
 });
 
+/**
+ * Fetches the correct React Component for the report based on the ID
+ * @param {string} id 
+ */
 function getReportComponent(id) {
   switch(id) {
     case 'averageWordLength':
@@ -29,6 +33,9 @@ function getReportComponent(id) {
   }
 }
 
+/**
+ * The App entry point
+ */
 function App() {
   useGlobalStyles();
   const { t } = useTranslation();

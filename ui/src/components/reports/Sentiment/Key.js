@@ -9,7 +9,10 @@ const useStyles = createUseStyles({
   }
 });
 
-const Target = () => {
+/**
+ * Draws the Key for the sentiments chart
+ */
+const Key = () => {
   const { t } = useTranslation();
   const classes = useStyles();
 
@@ -23,4 +26,4 @@ const Target = () => {
   );
 };
 
-export default Target;
+export default Key;

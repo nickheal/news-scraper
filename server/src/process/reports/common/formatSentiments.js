@@ -1,3 +1,17 @@
+/**
+ * Formats the sentiments from the AWS Comprehend API in to a simple format
+ * @param {Object} sentiments 
+ * @param {Object[]} sentiments.ResultList
+ * @param {number} sentiments.ResultList[].index
+ * @param {string} sentiments.ResultList[].Sentiment
+ * @param {object} sentiments.ResultList[].SentimentScore
+ * @param {number} sentiments.ResultList[].SentimentScore.Positive
+ * @param {number} sentiments.ResultList[].SentimentScore.Negative
+ * @param {number} sentiments.ResultList[].SentimentScore.Neutral
+ * @param {number} sentiments.ResultList[].SentimentScore.Mixed
+ * @param {[]} sentiments.ErrorList
+ * @returns {Object}
+ */
 export default function formatSentiments(sentiments) {
   const {
     ResultList

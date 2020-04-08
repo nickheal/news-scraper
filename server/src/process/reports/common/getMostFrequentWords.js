@@ -1,7 +1,7 @@
 /**
  * Gets the most frequent words from an array of words
  * @param {string[]} words - a list of all the words
- * @returns {object[]}
+ * @returns {Object[]}
  */
 export default function getMostFrequentWords(words) {
   return words

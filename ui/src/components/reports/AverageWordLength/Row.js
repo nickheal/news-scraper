@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+  number,
+  string
+} from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { useTranslation } from 'react-i18next';
 
@@ -27,6 +31,9 @@ const useStyles = createUseStyles({
   }
 });
 
+/**
+ * A row of the average word length report
+ */
 const Row = ({
   id,
   result
@@ -43,6 +50,13 @@ const Row = ({
       </dd>
     </div>
   );
+};
+
+Row.propTypes = {
+  /** The ID of the current row (target) */
+  id: string,
+  /** The average word length */
+  result: number
 };
 
 export default Row;

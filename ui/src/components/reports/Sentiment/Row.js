@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+  number,
+  shape,
+  string
+} from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { useTranslation } from 'react-i18next';
 
@@ -67,6 +72,7 @@ const useStyles = createUseStyles({
   }
 });
 
+/** A single row of the sentiment report */
 const Row = ({
   id,
   result
@@ -87,6 +93,18 @@ const Row = ({
       </dd>
     </div>
   );
+};
+
+Row.propTypes = {
+  /** The ID of the current row (target) */
+  id: string,
+  /** The sentiment result */
+  result: shape({
+    positive: number,
+    negative: number,
+    neutral: number,
+    mixed: number
+  })
 };
 
 export default Row;

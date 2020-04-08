@@ -5,11 +5,23 @@ export default [{
   id: 'buzzfeed',
   path: 'https://www.buzzfeed.com/'
 }, {
+  id: 'daily-echo',
+  path: 'https://www.dailyecho.co.uk/',
+}, {
+  id: 'daily-mail',
+  path: 'https://www.dailymail.co.uk/home/index.html'
+}, {
   id: 'financial-times',
   path: 'https://www.ft.com/'
 }, {
   id: 'guardian',
   path: 'https://www.theguardian.com/uk'
+}, {
+  id: 'hampshire-chronicle',
+  path: 'https://www.hampshirechronicle.co.uk/'
+}, {
+  id: 'hants-direct',
+  path: 'https://www.hantsdirect.com/'
 }, {
   id: 'heat',
   path: 'https://heatworld.com/'

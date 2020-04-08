@@ -18,8 +18,12 @@ const resources = {
       /** Targets */
       bbc: 'BBC',
       buzzfeed: 'Buzzfeed',
+      'daily-mail': 'Daily Mail',
+      'daily-echo': 'Daily Echo',
       'financial-times': 'Financial Times',
       guardian: 'The Guardian',
+      'hampshire-chronicle': 'Hamps. Chron.',
+      'hants-direct': 'Hants Direct',
       heat: 'Heat',
       reddit: 'Reddit'
     }
