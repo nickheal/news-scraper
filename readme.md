@@ -1,5 +1,7 @@
 # News Scraper
 
+![Screenshot](./screenshot.png)
+
 ## About
 This project aims to 'scrape' some metrics from the home pages of various news sites, in the hope that it might provide some interesing insight in to the different ways that they present the news.
 
